@@ -1,1 +1,1 @@
-"# NODE JS API RUN USING COMMAND 'start index.js'" 
+"# NODE JS API RUN USING COMMAND 'npm install then node index.js'" 
