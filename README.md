@@ -1,1 +1,1 @@
-"# NODE JS API RUN USING COMMAND 'start index.js'" 
+"# NODE JS API RUN USING COMMAND 'node index.js'" 
