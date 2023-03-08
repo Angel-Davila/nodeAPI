@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./routes/routes');
 
+mongoose.set('strictQuery', false);
 mongoose.connect(process.env.databaseConnectionString, { useNewUrlParser: true });
 
 
