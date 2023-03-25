@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router()
-const votesService = require('../services/vote-services');
+const votesService = require('../services/vote.services');
 
 router.post('/vote', async (req, res) => {
     await votesService.createVote(req, res);
