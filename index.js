@@ -1,4 +1,6 @@
-require('dotenv').config();
+if (process.env.NODE_ENV !== "production") {
+    require("dotenv").config();
+  }
 const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
@@ -15,9 +17,11 @@ app.use(cors());
 app.use('/api', routes);
 
 // Start server
-app.listen(3000, () => {
-    console.log('Server started on port 3000');
-})
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
 mongoose.connection.on('error', (error) => {
     console.log('Database connection error: ' + error)
 })
