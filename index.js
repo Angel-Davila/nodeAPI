@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const routes = require('./routes/routes');
 
 mongoose.set('strictQuery', false);
-mongoose.connect(process.env.databaseConnectionStringProd, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://admin:admin123@cluster0.94glo.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 const app = express();
