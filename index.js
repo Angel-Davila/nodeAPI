@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const routes = require('./routes/routes');
 
 mongoose.set('strictQuery', false);
-mongoose.connect(process.env.databaseConnectionString, { useNewUrlParser: true });
+mongoose.connect(process.env.databaseConnectionStringProd, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 const app = express();
